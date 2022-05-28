@@ -3,7 +3,15 @@
 --- !u!78 &1
 TagManager:
   serializedVersion: 2
-  tags: []
+  tags:
+  - Woodik
+  - Dynamic
+  - Work
+  - Coin
+  - Coin1
+  - Coin2
+  - Button1
+  - Fier
   layers:
   - Default
   - TransparentFX

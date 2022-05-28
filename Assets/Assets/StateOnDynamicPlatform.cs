@@ -29,25 +29,25 @@ public class StateOnDynamicPlatform : MonoBehaviour
             if (hit.transform.gameObject.CompareTag("Dynamic"))
             {
                 // то встановлюємо платформу батьківським об'єктом для персонажа
+                
+                if (Input.GetKey(KeyCode.LeftShift)) {
 
-                if (Input.GetKey(KeyCode.R)) { 
-               
                     transform.parent = hit.transform;
                     GetComponent<UnityStandardAssets.Characters.FirstPerson.FirstPersonController>().enabled = false;
-                    if (Input.GetKeyDown(KeyCode.W))
+                    if (Input.GetKey(KeyCode.W))
                     {
                         transform.parent.position += transform.forward * boatspeed;
                     }
-                    if (Input.GetKeyDown(KeyCode.S))
+                    if (Input.GetKey(KeyCode.S))
                     {
                         transform.parent.position += transform.forward * -boatspeed;
                     }
-                    if (Input.GetKeyDown(KeyCode.A))
+                    if (Input.GetKey(KeyCode.A))
                     {
                         transform.parent.position += transform.right * -boatspeed;
                     }
 
-                    if (Input.GetKeyDown(KeyCode.D))
+                    if (Input.GetKey(KeyCode.D))
                     {
                         transform.parent.position += transform.right * boatspeed;
                     }
