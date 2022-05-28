@@ -33,16 +33,7 @@ public class Open_Close_Box : MonoBehaviour
             axe.st = txt;
             
         }
-        if (Input.GetKeyDown(KeyCode.E))
-        {
-            image2.SetActive(true);
-           
-
-        } if (Input.GetKeyUp(KeyCode.E))
-        {
-            image2.SetActive(false);
-         
-        }
+      
     }
  
 }
