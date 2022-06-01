@@ -5,7 +5,7 @@ using UnityEngine.UI;
 
 public class Hq : MonoBehaviour
 {
-
+    public GameObject Image3;
     public float range = 1.4f;
     public Camera fpsCam;
     public float damage = 1f;
@@ -22,15 +22,14 @@ public class Hq : MonoBehaviour
     public void Update()
     {
         sd.text = fishcnt.ToString();
-        if (Input.GetMouseButtonDown(1))
-        {
+        
 
 
 
             Buy_Sold();
 
 
-        }
+        
 
     }
    public void Buy_Sold()

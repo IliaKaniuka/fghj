@@ -13,6 +13,8 @@ public class Dialog : MonoBehaviour
     public GameObject Image;
     public GameObject Image2;
     public GameObject Image3;
+    public Text coin;
+    public int cont;
 
     // Start is called before the first frame update
     void Start()
@@ -21,10 +23,10 @@ public class Dialog : MonoBehaviour
     }
 
     // Update is called once per frame
-    void Update()
+ public   void Update()
     {
         fishe.text = fish.ToString();
-
+        coin.text = cont.ToString();
 
        
         Polid();
@@ -39,15 +41,21 @@ public class Dialog : MonoBehaviour
             if (hit.collider.tag == "Work")
             {
                 Image.SetActive(true);
+                if (Input.GetKey(KeyCode.X))
+                {
+                    Image.SetActive(false);
+                    Image3.SetActive(true);
+                 
 
-            }
-            if (Input.GetKey(KeyCode.X))
-            {
-                Image.SetActive(false);
-                Image3.SetActive(true);
-             
 
+                }
+                if (Input.GetKeyDown(KeyCode.Alpha1))
+                {
+                    fish++;
+                    cont--;
+                }
             }
+
             if (hit.collider.tag == "Untagged")
             {
                 Image.SetActive(false);
