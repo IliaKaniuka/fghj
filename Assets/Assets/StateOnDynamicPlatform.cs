@@ -1,10 +1,16 @@
 using UnityEngine;
 
 public class StateOnDynamicPlatform : MonoBehaviour
-{
+{ public Camera fpsCam;
     public float boatspeed = 1f;
+    public Vector2 turn;
+    public void Start()
+    {
+        Cursor.lockState = CursorLockMode.Locked;
+    }
     public void Update()
     {
+     
         DetectGround();
     }
 
@@ -31,8 +37,11 @@ public class StateOnDynamicPlatform : MonoBehaviour
                 // то встановлюємо платформу батьківським об'єктом для персонажа
                 
                 if (Input.GetKey(KeyCode.LeftShift)) {
-
+                  
                     transform.parent = hit.transform;
+                    turn.x += Input.GetAxis("Mouse X");
+                   
+                    transform.parent.localRotation = Quaternion.Euler(-turn.y, turn.x, 0);
                     GetComponent<UnityStandardAssets.Characters.FirstPerson.FirstPersonController>().enabled = false;
                     if (Input.GetKey(KeyCode.W))
                     {

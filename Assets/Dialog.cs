@@ -5,7 +5,9 @@ using UnityEngine.UI;
 
 public class Dialog : MonoBehaviour
 {
-
+    public GameObject coin;
+    public GameObject coin1;
+    public GameObject coin2;
     public Text fishe;
     public int fish;
     public float range = 1.4f;
@@ -13,7 +15,7 @@ public class Dialog : MonoBehaviour
     public GameObject Image;
     public GameObject Image2;
     public GameObject Image3;
-    public Text coin;
+    public Text coinr;
     public int cont;
 
     // Start is called before the first frame update
@@ -26,10 +28,11 @@ public class Dialog : MonoBehaviour
  public   void Update()
     {
         fishe.text = fish.ToString();
-        coin.text = cont.ToString();
+        coinr.text = cont.ToString();
 
        
         Polid();
+        Coins();
     }
     private void Polid()
     {
@@ -67,6 +70,46 @@ public class Dialog : MonoBehaviour
 
         }
 
+    }
+    private void Coins()
+    {
+        RaycastHit hit;
+        Ray ray = fpsCam.ScreenPointToRay(Input.mousePosition * range);
+
+        if (Physics.Raycast(ray, out hit))
+        {
+            if (hit.collider.tag == "Coin")
+            {
+                if (Input.GetKey(KeyCode.E))
+                {
+
+                    coin.SetActive(false);
+                    cont++;
+                }
+
+            }
+            if (hit.collider.tag == "Coin1")
+            {
+                if (Input.GetKeyDown(KeyCode.E))
+                {
+
+                    coin1.SetActive(false);
+                    cont++;
+                }
+            }
+            if (hit.collider.tag == "Coin2")
+            {
+                if (Input.GetKeyDown(KeyCode.E))
+                {
+
+                    coin2.SetActive(false);
+                    cont++;
+                }
+            }
+
+
+
+        }
     }
 
 }
