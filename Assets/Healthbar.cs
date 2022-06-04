@@ -20,7 +20,7 @@ public class Healthbar : MonoBehaviour
     // Update is called once per frame
     public  void Update()
     {
-        fill -= Time.deltaTime * 0.0001f;
+        fill -= Time.deltaTime * 0.001f;
         healthbar.fillAmount = fill;
     }
 }
