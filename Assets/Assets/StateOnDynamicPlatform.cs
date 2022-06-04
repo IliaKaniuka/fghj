@@ -61,6 +61,10 @@ public class StateOnDynamicPlatform : MonoBehaviour
                         transform.parent.position += transform.right * boatspeed;
                     }
                 }
+                if (Input.GetKeyUp(KeyCode.LeftShift))
+                {
+                    GetComponent<UnityStandardAssets.Characters.FirstPerson.FirstPersonController>().enabled = true;
+                }
                 
             }
         }
