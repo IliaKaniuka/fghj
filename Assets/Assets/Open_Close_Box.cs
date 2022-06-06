@@ -19,16 +19,19 @@ public class Open_Close_Box : MonoBehaviour
         {
           
             image.SetActive(true);
-           
+            GetComponent<UnityStandardAssets.Characters.FirstPerson.FirstPersonController>().enabled = false;
+
         }
         if (Input.GetKeyUp(KeyCode.Tab))
         {
           
             image.SetActive(false);
-          
+            GetComponent<UnityStandardAssets.Characters.FirstPerson.FirstPersonController>().enabled = true;
+
         }
  
       
     }
+  
  
 }
