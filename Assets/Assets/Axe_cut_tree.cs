@@ -34,7 +34,7 @@ public void Update()
         }
 
 }
-    void Buy_Sold()
+   private void Buy_Sold()
     {
 
         RaycastHit hit;

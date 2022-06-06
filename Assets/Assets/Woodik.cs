@@ -14,7 +14,7 @@ public void TakeDamage(float amount)
             Die();
         }
       
-    } public void  Die()
+    } private void  Die()
     {
         Destroy(gameObject);
     }
