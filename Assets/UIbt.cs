@@ -18,7 +18,7 @@ public class UIbt : MonoBehaviour
     {
  
     }
-    public void Eat()
+    public void OnClick()
     {
 
         eat.SetActive(true);
