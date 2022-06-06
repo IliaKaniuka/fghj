@@ -27,12 +27,7 @@ public class Open_Close_Box : MonoBehaviour
             image.SetActive(false);
           
         }
-        if (Input.GetKeyDown(KeyCode.Tab))
-        {
-           Axe_cut_tree axe =  GetComponent<Axe_cut_tree>();
-            axe.st = txt;
-            
-        }
+ 
       
     }
  
