@@ -26,15 +26,15 @@ public class Transform_Axe : MonoBehaviour
             anim.SetTrigger("Hit");
         }
         
-        if (Input.GetKeyUp(KeyCode.Alpha1))
+        if (Input.GetKeyUp(KeyCode.R))
         {
             weapon1.SetActive(false);
             weapon.SetActive(true);
-        }if (Input.GetKeyUp(KeyCode.Alpha2))
+        }if (Input.GetKeyUp(KeyCode.T))
         {
             weapon.SetActive(false);
             weapon1.SetActive(true);
-        }if (Input.GetKeyUp(KeyCode.Alpha3))
+        }if (Input.GetKeyUp(KeyCode.Escape))
         {
             weapon.SetActive(false);
             weapon1.SetActive(false);
