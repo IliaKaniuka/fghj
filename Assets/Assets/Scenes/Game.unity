@@ -123,6 +123,11 @@ NavMeshSettings:
     debug:
       m_Flags: 0
   m_NavMeshData: {fileID: 23800000, guid: d9a9d497b942cab41a45f94ff9c79f63, type: 2}
+--- !u!1 &24285901 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 2723444422625680322, guid: 1ccaecc0d7c334429b161837dada6bbe, type: 3}
+  m_PrefabInstance: {fileID: 5514175158180363857}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &50179822
 GameObject:
   m_ObjectHideFlags: 0
@@ -986,6 +991,7 @@ GameObject:
   m_Component:
   - component: {fileID: 490247778}
   - component: {fileID: 501530498}
+  - component: {fileID: 490670668}
   - component: {fileID: 490670667}
   - component: {fileID: 490670660}
   - component: {fileID: 490670665}
@@ -1234,6 +1240,20 @@ MonoBehaviour:
   image2: {fileID: 0}
   wood: {fileID: 0}
   wer: 0
+--- !u!114 &490670668
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 490670658}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: faaf4e646f8152749923dc987353a04b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  fier: {fileID: 24285901}
+  fpsCam: {fileID: 488638562}
 --- !u!114 &490670669
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -2932,6 +2952,50 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: a0c53a09e4a37b5409b1248ebce2c376, type: 3}
+--- !u!1 &1149442969
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1149442970}
+  - component: {fileID: 1149442971}
+  m_Layer: 0
+  m_Name: GameObject
+  m_TagString: Fier
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &1149442970
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1149442969}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 2.4619923, y: 0.5534197, z: 2.1854727}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 869177558}
+  m_RootOrder: 12
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!65 &1149442971
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1149442969}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 2.1969216, y: 1.6171478, z: 2.3671799}
+  m_Center: {x: -0.20496282, y: 0.3085739, z: -0.44045877}
 --- !u!1 &1182213688 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 115020, guid: a0c53a09e4a37b5409b1248ebce2c376, type: 3}
@@ -7335,6 +7399,10 @@ PrefabInstance:
     - target: {fileID: 2723444422625680322, guid: 1ccaecc0d7c334429b161837dada6bbe, type: 3}
       propertyPath: m_Name
       value: Fire Alone_02
+      objectReference: {fileID: 0}
+    - target: {fileID: 2723444422625680322, guid: 1ccaecc0d7c334429b161837dada6bbe, type: 3}
+      propertyPath: m_IsActive
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 2781940586125067896, guid: 1ccaecc0d7c334429b161837dada6bbe, type: 3}
       propertyPath: m_Materials.Array.size
