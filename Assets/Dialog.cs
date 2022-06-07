@@ -17,6 +17,8 @@ public class Dialog : MonoBehaviour
     public GameObject Image3;
     public Text coinr;
     public int cont;
+    public Text Water;
+    public int wat;
 
     // Start is called before the first frame update
     void Start()
@@ -27,6 +29,7 @@ public class Dialog : MonoBehaviour
     // Update is called once per frame
  public   void Update()
     {
+        Water.text = wat.ToString();
         fishe.text = fish.ToString();
         coinr.text = cont.ToString();
 
@@ -56,7 +59,12 @@ public class Dialog : MonoBehaviour
                 {
                     fish++;
                     cont--;
-                }
+                }  if (Input.GetKeyDown(KeyCode.Alpha2))
+                {
+                    wat++;
+                    cont--;
+                } 
+
             }
 
             if (hit.collider.tag == "Untagged")
@@ -66,7 +74,10 @@ public class Dialog : MonoBehaviour
                 Image3.SetActive(false);
 
             }
-
+            if (Input.GetKeyDown(KeyCode.Alpha4))
+            {
+                fish--;
+            }
 
         }
 
@@ -111,5 +122,5 @@ public class Dialog : MonoBehaviour
 
         }
     }
-
+ 
 }

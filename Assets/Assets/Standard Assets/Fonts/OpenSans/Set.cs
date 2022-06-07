@@ -1,12 +1,10 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
-using UnityEngine.UI;
 
-public class UIbt : MonoBehaviour
+public class Set : MonoBehaviour
 {
-    public Image eat;
-
+    public GameObject Imag;
     // Start is called before the first frame update
     void Start()
     {
@@ -14,17 +12,13 @@ public class UIbt : MonoBehaviour
     }
 
     // Update is called once per frame
-    public void Update()
+    void Update()
     {
-        if (eat.enabled == false) {
-
-            OnClick();
-        }
-
+     
     }
-    public void OnClick()
+    public void Eat()
     {
-
-        eat.enabled = true;
+        Imag.SetActive(true);
     }
+
 }

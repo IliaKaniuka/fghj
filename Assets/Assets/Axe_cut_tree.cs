@@ -13,6 +13,7 @@ public Camera fpsCam;
 public float damage = 1f;
 public Text st;
 public int fishcnt;
+    public GameObject Imag;
 public void Start()
 {
 
@@ -50,4 +51,5 @@ public void Update()
         }
 
     }
+
 }

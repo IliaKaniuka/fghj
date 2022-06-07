@@ -14,13 +14,17 @@ public class Healthbar : MonoBehaviour
     {
         healthbar = GetComponent<Image>();
         HP = maxHealth;
-        fill = 1f;
+        fill = 0.2f;
     }
 
     // Update is called once per frame
-    public  void Update()
+    public void Update()
     {
         fill -= Time.deltaTime * 0.001f;
         healthbar.fillAmount = fill;
+        if (Input.GetKey(KeyCode.Alpha5))
+        {
+            fill += 0.2f;
+        }
     }
 }
