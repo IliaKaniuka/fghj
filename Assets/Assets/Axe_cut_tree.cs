@@ -29,7 +29,7 @@ public void Update()
 
 
             Buy_Sold();
-
+         
 
             
         }
@@ -50,6 +50,13 @@ public void Update()
             }
         }
 
+    }
+    public void Wood_min()
+    {
+        if (Input.GetKeyDown(KeyCode.Alpha3))
+        {
+            fishcnt--;
+        }
     }
 
 }

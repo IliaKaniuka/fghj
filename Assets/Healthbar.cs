@@ -14,7 +14,7 @@ public class Healthbar : MonoBehaviour
     {
         healthbar = GetComponent<Image>();
         HP = maxHealth;
-        fill = 0.2f;
+        fill = 1f;
     }
 
     // Update is called once per frame
@@ -24,7 +24,7 @@ public class Healthbar : MonoBehaviour
         healthbar.fillAmount = fill;
         if (Input.GetKey(KeyCode.Alpha5))
         {
-            fill += 0.2f;
+            fill += 0.0002f;
         }
     }
 }

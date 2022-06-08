@@ -1020,7 +1020,7 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 490670658}
-  m_Enabled: 1
+  m_Enabled: 0
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 13c87c5d1121374409ac3bc8d5bfa527, type: 3}
   m_Name: 
@@ -1211,6 +1211,10 @@ MonoBehaviour:
   cont: 20
   Water: {fileID: 9008992234687047973}
   wat: 0
+  damage: 1
+  st: {fileID: 9008992236028079242}
+  fishcnt: 0
+  Imag: {fileID: 0}
 --- !u!114 &490670666
 MonoBehaviour:
   m_ObjectHideFlags: 0
