@@ -97,7 +97,7 @@ public class Dialog : MonoBehaviour
                 Image3.SetActive(false);
 
             }
-            if (Input.GetKeyDown(KeyCode.Alpha4))
+            if (Input.GetKeyDown(KeyCode.Alpha5))
             {
                 fish--;
             }
