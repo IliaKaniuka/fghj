@@ -20,14 +20,14 @@ public class Dialog : MonoBehaviour
     public Text Water;
     public int wat;
     Animator anim;
-
+    public GameObject fier;
  
  
     public float damage = 1f;
     public Text st;
     public int fishcnt;
     public GameObject Imag;
-
+    public GameObject Fier;
     // Start is called before the first frame update
     void Start()
     {
@@ -101,6 +101,21 @@ public class Dialog : MonoBehaviour
             {
                 fish--;
             }
+            if (hit.collider.tag == "Fier")
+            {
+                Fier.SetActive(true);
+                if (Input.GetKeyDown(KeyCode.E))
+                {
+                    fier.SetActive(true);
+                    fishcnt--;
+                }
+
+            } if (hit.collider.tag == "Untagged")
+            {
+                Fier.SetActive(false);
+                
+               
+            }
 
         }
 
@@ -140,6 +155,7 @@ public class Dialog : MonoBehaviour
                     cont++;
                 }
             }
+          
 
 
 
