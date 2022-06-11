@@ -12,6 +12,8 @@ TagManager:
   - Coin2
   - Button1
   - Fier
+  - memories
+  - coin
   layers:
   - Default
   - TransparentFX

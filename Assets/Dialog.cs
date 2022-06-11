@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 using UnityEngine.UI;
 
 public class Dialog : MonoBehaviour
@@ -28,6 +29,8 @@ public class Dialog : MonoBehaviour
     public int fishcnt;
     public GameObject Imag;
     public GameObject Fier;
+    public GameObject confusion;
+    public GameObject confusion1;
     // Start is called before the first frame update
     void Start()
     {
@@ -86,8 +89,20 @@ public class Dialog : MonoBehaviour
                 {
                     fishcnt--;
                     cont++;
-                } 
+                }
+                if (Input.GetKey(KeyCode.Y))
+                {
+                    confusion.SetActive(true);
+                }    if (Input.GetKey(KeyCode.U))
+                {
+                    confusion1.SetActive(true);
+                }
 
+            }if(hit.collider.tag == "coin")
+            {
+                if (Input.GetKey(KeyCode.G)) { 
+                SceneManager.LoadScene(3);
+                }
             }
 
             if (hit.collider.tag == "Untagged")
@@ -95,6 +110,8 @@ public class Dialog : MonoBehaviour
                 Image.SetActive(false);
                 Image2.SetActive(false);
                 Image3.SetActive(false);
+                confusion.SetActive(false);
+                confusion1.SetActive(false);
 
             }
             if (Input.GetKeyDown(KeyCode.Alpha5))
